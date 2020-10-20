@@ -1,54 +1,55 @@
 $brand-red: #ff2a01;
 
-.pizzaItem-container button {
-  padding: 10px;
-  margin-bottom: 0px;
-  color: white;
-  background-color: $brand-red;
-  border-radius: 9px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: small;
-  font-weight: bold;
-  border: #fff solid 1px;
-}
-
+/* Add some padding inside the card container */
+// .container {
+//   // padding: 10px;
+//   // height: 60%;
+// }
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  float: center;
-  transition: 0.3s;
-  margin: 10px;
-  padding-bottom: 20px;
-  padding: 10px;
+  transition: 0.5s;
   width: 95%;
-  border-radius: 5px;
   text-align: center;
   background-color: transparent;
-  color: #080000;
-  // border: $brand-red solid 2px;
-  height: 90%;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 10px;
-  height: 70%;
-  border-radius: 5px;
-}
-
-.pizza-name {
+  color: white;
+  margin: 0px 0 -8% 0;
+  // &:hover img {
+  //   transform: rotate(100deg);
+  // }
 }
 img {
-  margin: 15px 10px 0px 10px;
+  margin: 0px 10px -5% 10px;
   width: 88%;
-  height: auto;
-  border-radius: 50px;
   text-align: center;
-  /* border: #080000 solid 2px; */
+  transition: all 5s;
+
+  &:hover {
+    transform: rotate(100deg);
+  }
+}
+.pizza-name {
+  font: larger 'Sansita Swashed', cursive;
+  color: #fcc92a;
+}
+.pizza-space {
+  display: block;
+  margin: 7px 0;
+  line-height: 10px;
+  content: ' ';
+}
+.pizza-price {
+  font: large 'Open Sans', sans-serif;
+}
+
+.pizza-button {
+  transition: all 0.5s;
+  &:hover {
+    transition: all 0.5s;
+    color: #e41d25;
+  }
+}
+
+.pizzaItem-container button {
+  color: white;
+  transition: all 0.5s;
+  margin: -29% 10% 0% 10%;
 }

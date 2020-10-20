@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PizzaListItem from '../PizzaListItem/PizzaListItem';
 import { connect } from 'react-redux';
-import './PizzaList.css';
+import './PizzaList.scss';
 class PizzaList extends Component {
   render() {
     return (

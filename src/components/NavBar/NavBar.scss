@@ -1,0 +1,28 @@
+#app-title {
+  font: medium 'Sansita Swashed', cursive;
+  font-size: 40px;
+  color: white;
+
+  padding-bottom: 0.5%;
+  //   margin-bottom: -2%;
+  //   font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+#icon-container {
+  margin-left: auto;
+}
+
+#pizza-menu-icon-button {
+  transition: all 0.5s;
+  color: white;
+  &:hover {
+    color: orange;
+  }
+}
+#checkout-icon-button {
+  transition: all 0.5s;
+  color: white;
+  &:hover {
+    color: orange;
+  }
+}

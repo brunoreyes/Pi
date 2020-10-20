@@ -33,27 +33,22 @@ class Pizza extends Component {
 
   render() {
     return (
-      <div className="Pizza_Background">
-        <header className="App-header">
-          <h1 className="App-title">Pi</h1>Bill Total: $
-          {this.props.reduxState.addToCartReducer.reduce(function (acc, item) {
-            return acc + parseFloat(item.price);
-          }, 0)}
-        </header>
+      <div className="Pizza-Background">
+        {/* <header id="App-header">
+          <h1 id="App-title">Pi</h1>
+          <br></br> */}
+        {/* <h3 id="total">
+            Total: $
+            {this.props.reduxState.addToCartReducer.reduce(function (
+              acc,
+              item
+            ) {
+              return acc + parseFloat(item.price);
+            },
+            0)} */}
+        {/* </h3>
+        </header> */}
 
-        {/* <ul className="nav">
-          <li>
-            <Link to="/">Pizza</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-        </ul> */}
-
-        {/* <img src="images/pizza_photo.png"/> */}
-        {/* pizzaList which then maps through PizzaItems
-                    When Pizza Item is clicked, takes you to cart.
-                    */}
         <PizzaList pizzas={this.state.pizzas} />
       </div>
     );

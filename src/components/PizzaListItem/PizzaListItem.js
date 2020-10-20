@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import './PizzaListItem.scss';
+import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import { IconButton } from '@material-ui/core/';
 
 class PizzaListItem extends Component {
   addPizzaToCart = (event) => {
@@ -38,17 +41,32 @@ class PizzaListItem extends Component {
         <li>
           <main className="card">
             <img
+              className="pizza-image"
               src={this.props.product.image_path}
               alt={this.props.product.description}
             />
             <section className="container">
               <h2>
                 <span className="pizza-name">{this.props.product.name}</span>
-                <br></br> ${this.props.product.price}
+                <br className="pizza-space"></br>
+
+                <span className="pizza-price">${this.props.product.price}</span>
               </h2>
-              <p>{this.props.product.description}</p>
-              <button onClick={this.addPizzaToCart}>Add to Cart</button>
-              <button onClick={this.removePizza}>Remove From Cart</button>
+              <IconButton
+                className="pizza-button"
+                aria-controls="pizza-button"
+                aria-label="add pizza"
+              >
+                <AddCircleIcon />
+              </IconButton>
+              <IconButton
+                className="pizza-button"
+                aria-controls="pizza-button"
+                aria-label="remove pizza"
+                onClick={this.removePizza}
+              >
+                <RemoveCircleIcon />
+              </IconButton>
             </section>
           </main>
         </li>
