@@ -1,0 +1,14 @@
+
+
+.pizzaList-container {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: space-evenly;
+  grid-gap: 32px;
+}
+
+ul,
+li {
+  list-style: none;
+}

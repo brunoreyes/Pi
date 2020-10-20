@@ -1,0 +1,14 @@
+input{
+    display:block;
+    
+}
+ form{
+    text-align: center;
+}
+radioBtn-form{
+    text-align: center;
+    display: inline-block; 
+}
+.form-container{
+
+}

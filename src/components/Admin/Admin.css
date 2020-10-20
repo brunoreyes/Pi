@@ -1,0 +1,12 @@
+.admin {
+    background-color: lightblue;
+}
+
+h2 {
+text-align: center;
+}
+
+th, td{
+    border-bottom: 1px solid darkslategrey;
+    padding-right: 20px;
+}

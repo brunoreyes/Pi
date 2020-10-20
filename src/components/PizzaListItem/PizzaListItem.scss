@@ -1,0 +1,54 @@
+$brand-red: #ff2a01;
+
+.pizzaItem-container button {
+  padding: 10px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: $brand-red;
+  border-radius: 9px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: small;
+  font-weight: bold;
+  border: #fff solid 1px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  float: center;
+  transition: 0.3s;
+  margin: 10px;
+  padding-bottom: 20px;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: transparent;
+  color: #080000;
+  // border: $brand-red solid 2px;
+  height: 90%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 10px;
+  height: 70%;
+  border-radius: 5px;
+}
+
+.pizza-name {
+}
+img {
+  margin: 15px 10px 0px 10px;
+  width: 88%;
+  height: auto;
+  border-radius: 50px;
+  text-align: center;
+  /* border: #080000 solid 2px; */
+}
