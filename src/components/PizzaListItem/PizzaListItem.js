@@ -10,23 +10,20 @@ class PizzaListItem extends Component {
   addPizzaToCart = (event) => {
     console.log('add btn', event);
     console.log('PRODUCT', this.props.product);
-    // TODO: Dispatch here
-    //this will add the price of pizza to a count to be displayed on
-    //  '/', '/cart', and '/checkout'
     this.props.dispatch({ type: 'ADD_TO_CART', payload: this.props.product });
   };
 
   removePizza = () => {
-    console.log('in remove Pizza:', this.props.product);
+    // console.log('in remove Pizza:', this.props.product);
     // axios delete call:
     axios
       .delete('/api/order/' + this.props.product.id)
       .then((response) => {
-        console.log('back from delete with', response);
+        // console.log('back from delete with', response);
         //add a get call
       })
       .catch((error) => {
-        console.log('error on delete:', error);
+        // console.log('error on delete:', error);
         alert('bad DELET call');
       }); //end axios
     this.props.dispatch({
@@ -56,6 +53,7 @@ class PizzaListItem extends Component {
                 className="pizza-button"
                 aria-controls="pizza-button"
                 aria-label="add pizza"
+                onClick={this.addPizzaToCart}
               >
                 <AddCircleIcon />
               </IconButton>

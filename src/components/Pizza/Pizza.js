@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import PizzaList from '../PizzaList/PizzaList';
-import { Link } from 'react-router-dom';
-import PizzaListItem from '../PizzaListItem/PizzaListItem';
-import { Paper, Tabs, Tab } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import './Pizza.scss';
 class Pizza extends Component {
   state = { pizzas: [] };
@@ -34,21 +28,6 @@ class Pizza extends Component {
   render() {
     return (
       <div className="Pizza-Background">
-        {/* <header id="App-header">
-          <h1 id="App-title">Pi</h1>
-          <br></br> */}
-        {/* <h3 id="total">
-            Total: $
-            {this.props.reduxState.addToCartReducer.reduce(function (
-              acc,
-              item
-            ) {
-              return acc + parseFloat(item.price);
-            },
-            0)} */}
-        {/* </h3>
-        </header> */}
-
         <PizzaList pizzas={this.state.pizzas} />
       </div>
     );

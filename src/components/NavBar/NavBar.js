@@ -1,15 +1,12 @@
-import React from 'react';
-// import { withStyles } from '@material-ui/core/styles';
+import React from 'react'; // { useState, useEffect, useReducer }
 import {
   AppBar,
-  // Tabs,
-  // Tab,
   Typography,
-  // Button,
   IconButton,
   Toolbar,
-  Badge,
+  // Badge,
 } from '@material-ui/core/';
+// import axios from 'axios';
 import { connect } from 'react-redux';
 // import ImageFeed from '../../pages/ImageFeed/ImageFeed'; //page one
 // import UploadPage from '../../pages/UploadPage/UploadPage'; // page two
@@ -17,16 +14,12 @@ import { Switch, Route, Link, BrowserRouter } from 'react-router-dom';
 import CustomerForm from '../CustomerForm/CustomerForm.js';
 import Pizza from '../Pizza/Pizza.js';
 import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+// import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import CartBadge from './../CartBadge/CartBadge.js';
 import './NavBar.scss';
+
 function ProjectTabs() {
   const allTabs = ['/', '/cart'];
-  const styles = {
-    //   AppBar: {
-    //     // background: '#0c0101',
-    //     boxShadow: 'none',
-    //   },
-  };
   return (
     <>
       <BrowserRouter>
@@ -35,15 +28,11 @@ function ProjectTabs() {
             path="/"
             render={({ location }) => (
               <div>
-                <AppBar style={styles.AppBar} position="static">
+                <AppBar position="static">
                   <Toolbar>
-                    <Typography
-                      // className={classes.title}
-                      variant="h1"
-                      noWrap
-                      id="app-title"
-                    >
+                    <Typography variant="h1" noWrap id="app-title">
                       Pi
+                      {/* {JSON.stringify(quantity)} */}
                     </Typography>
                     <div id="icon-container">
                       <IconButton
@@ -56,26 +45,15 @@ function ProjectTabs() {
                       >
                         <LocalPizzaIcon />
                       </IconButton>
-
                       <IconButton
                         aria-controls="menu-appbar"
                         aria-label="Checkout"
                         id="checkout-icon-button"
-                        value="/CustomerForm"
-                        component={Link}
                         to={allTabs[1]}
+                        component={Link}
+                        value="/CustomerForm"
                       >
-                        <Badge
-                          badgeContent={17}
-                          // color="black"
-                          color="error"
-                          anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                          }}
-                        >
-                          <ShoppingBasketIcon />
-                        </Badge>
+                        <CartBadge />
                       </IconButton>
                     </div>
                   </Toolbar>
@@ -92,6 +70,9 @@ function ProjectTabs() {
     </>
   );
 }
-export default ProjectTabs;
+// export default ProjectTabs;
+// reduxState is awesome bc it allows you to pass props to through multiple components
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
+export default connect(putReduxStateOnProps)(ProjectTabs);
 // const putReduxStateOnProps = (reduxState) => ({ reduxState });
 // export default connect(putReduxStateOnProps)(withStyles(styles)(ProjectTabs));
